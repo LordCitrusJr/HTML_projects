@@ -1,0 +1,118 @@
+<html>
+
+<head>
+  <style>
+    div {
+      width: 200px;
+      font-size: 28px;
+    }
+
+    #d1 {
+      font-family: "Gill Sans", sans-serif;
+      border: 2px solid white;
+    }
+
+    #d2 {
+      font-family: system-ui;
+      font-size: 14px;
+      border: 4px dotted red;
+    }
+
+    #coolButton {
+      width: 300px;
+      height: 75px;
+      font-size: 36px;
+      border: 4px dotted blue;
+      font-family: cursive;
+      color: white;
+      background-color: black;
+    }
+
+    h1 {
+      width: 400px;
+      font-size: 28px;
+      border: 10px solid black;
+      text-align: center;
+    }
+
+    .yellowback {
+      background-color: yellow;
+    }
+
+    .blueback {
+      background-color: lightblue;
+    }
+
+    
+  </style>
+
+  <script>
+    function changeColor() {
+      var dd1 = document.getElementById("d1");
+      var dd2 = document.getElementById("d2");
+
+      dd1.className = "blueback";
+      dd2.className = "yellowback";
+
+      alert('You Changed the Background Color');
+    }
+
+    function choice() {
+      var choice;
+      if (confirm("Press a button!") == true) {
+        choice = alert("You pressed OK!");
+      } else {
+        choice = alert("You canceled!");
+      }
+    }
+
+    function changeText() {
+      var dd1 = document.getElementById("d1");
+      var dd2 = document.getElementById("d2");
+
+      dd1.innerHTML = "Bonjour";
+      dd2.innerHTML = "Sayonara";
+
+      alert('You Changed the Text');
+    }
+    
+    function textColor() {
+      document.getElementById("d1").style.color = "purple";
+      document.getElementById("d2").style.color = "pink";
+
+      alert('You Changed the Colors');
+    }
+    
+  </script>
+</head>
+
+<body>
+  <title>
+    Changing Your Page With Buttons
+  </title>
+  <div>
+    <h1>
+      Buttons with Divs
+    </h1>
+  </div>
+  <div id="d1">
+    Hello
+  </div>
+  <div id="d2">
+    Goodbye
+  </div>
+  <p>
+    <input type="button" value="Change Color" onclick="changeColor()" id="coolButton">
+  </p>
+  <p>
+    <input type="button" value="Change Text" onclick="changeText()">
+  </p>
+  <p>
+    <input type="button" value="Button Test" onclick="choice()">
+  </p>
+  <p>
+    <input type="button" value="Change Text Color" onclick="textColor()">
+  </p>
+</body>
+
+</html>
